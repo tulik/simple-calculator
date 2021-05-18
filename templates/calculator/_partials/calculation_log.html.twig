@@ -1,0 +1,23 @@
+{% extends 'index.html.twig' %}
+
+{% block title %}CalculationLog index{% endblock %}
+
+{% block calculation_log %}
+    <h3>Calculation History</h3>
+
+    <table class="table">
+        <tbody>
+        {% for calculation_log in calculation_logs %}
+            <tr scope="row">
+                <td>{{ calculation_log.id }}</td>
+                <td>{{ calculation_log.calcInput }}</td>
+                <td>{{ calculation_log.calcOutput }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

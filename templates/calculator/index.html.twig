@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CalculationLog index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center text-uppercase">Calculator</h2>
+            <p class="text-center">
+                <samp>A simple calculator that can handle the following calculation types:
+                    <strong>plus, minus, multiplication, division</strong>.<br/>
+                <strong>Use example:</strong>
+                    Put the formula in a using following format <kbd>1+2*4/7</kbd> and submit.
+            </samp>
+            <div class="alert alert-warning" role="alert">
+                Use brackets to preserve Rules of Precedence!
+            </div>
+            <hr/>
+            <div class="col-sm">
+                {{ block("calculation_log", "calculator/_partials/calculation_log.html.twig") }}
+            </div>
+            <div class="col-sm">
+                {{ block("numeric_keyboard", "calculator/_partials/calculator_input.html.twig") }}
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
