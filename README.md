@@ -3,7 +3,7 @@
 Clone the repository and set up the project:
 
 ```
-comopser install
+composer install
 
 bin/console doctrine:database:create
 bin/console doctrine:migrations:migrate
